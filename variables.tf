@@ -81,6 +81,12 @@ variable "zone_id" {
   default     = ""
 }
 
+variable "domains_zones_ids" {
+  description = "The domain/zone_id pair for each Route53 zone validation. Required either it or zone_id when validating via Route53"
+  type        = map(string)
+  default     = {}
+}
+
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
   type        = map(string)
